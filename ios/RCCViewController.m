@@ -121,20 +121,11 @@ const NSInteger TRANSPARENT_NAVBAR_TAG = 78264803;
     return modifiedPassProps;
 }
 
-<<<<<<< HEAD
-- (void)sendGlobalScreenEvent:(NSString *)eventName endTimestampString:(NSString *)endTimestampStr shouldReset:(BOOL)shouldReset {
-  
-  //if (!self.commandType) return;
-  
-  if ([self.view isKindOfClass:[RCTRootView class]]){
-    NSString *screenName = [((RCTRootView*)self.view) moduleName];
-=======
 
 
 - (instancetype)initWithProps:(NSDictionary *)props children:(NSArray *)children globalProps:(NSDictionary *)globalProps bridge:(RCTBridge *)bridge {
     NSString *component = props[@"component"];
     if (!component) return nil;
->>>>>>> cd80eca7823b0a41407ccdf0029ee41e0dabe3a9
     
     NSDictionary *passProps = props[@"passProps"];
     NSDictionary *navigatorStyle = props[@"style"];
