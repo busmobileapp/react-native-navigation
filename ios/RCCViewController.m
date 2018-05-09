@@ -121,8 +121,6 @@ const NSInteger TRANSPARENT_NAVBAR_TAG = 78264803;
     return modifiedPassProps;
 }
 
-
-
 - (instancetype)initWithProps:(NSDictionary *)props children:(NSArray *)children globalProps:(NSDictionary *)globalProps bridge:(RCTBridge *)bridge {
     NSString *component = props[@"component"];
     if (!component) return nil;
