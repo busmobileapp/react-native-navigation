@@ -204,7 +204,9 @@ public class NavigationActivity extends AppCompatActivity implements DefaultHard
     @Override
     public void invokeDefaultOnBackPressed() {
         if (layout != null && !layout.onBackPressed()) {
-            super.onBackPressed();
+            // Commented by Sabry[14/May/2018] Replaced super.onBackPressed()
+            // with this method such that the JS context does not get destroyed
+            this.moveTaskToBack(true);
         }
     }
 
